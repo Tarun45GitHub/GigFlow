@@ -1,0 +1,10 @@
+step1: install all reqired npm pacakage
+step2: make all required folder
+step3: write all models
+step4: write env cridentials and copy to .env.example
+step5: write db code and connect db
+step6: write  all controllers 
+step7: write authmiddleware
+step8: write all routes file
+step9: complete server.js
+step10:debug
