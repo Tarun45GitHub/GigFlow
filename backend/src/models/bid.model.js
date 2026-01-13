@@ -1,5 +1,5 @@
 import mongoose from "mongoose";
-import { Schema } from "mongoose";
+
 
 const bidSchema = new mongoose.Schema({
   gigId: { type: mongoose.Schema.Types.ObjectId, ref: "Gig" },

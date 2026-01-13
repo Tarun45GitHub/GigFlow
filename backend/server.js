@@ -13,7 +13,7 @@ const server = http.createServer(app);
 
 export const io = new Server(server, {
   cors: {
-    origin: "http://localhost:5173",
+    origin:process.env.frontend_URl,
     credentials: true,
   },
 });
@@ -29,7 +29,7 @@ io.on("connection", (socket) => {
     console.log("User disconnected");
   });
 });
-
-server.listen(5000, () => {
-  console.log("Server running on port 5000");
+const port=process.env.PORT||5000;
+server.listen(port, () => {
+  console.log(`server running on ${port}`);
 });

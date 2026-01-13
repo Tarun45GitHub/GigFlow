@@ -15,7 +15,7 @@ app.use(cookieParser());
 // CORS (frontend → backend)
 app.use(
   cors({
-    origin: "http://localhost:5173", // Vite frontend
+     origin:process.env.frontend_URl, // Vite frontend
     credentials: true,
   })
 );
