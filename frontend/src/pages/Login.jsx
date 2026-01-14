@@ -35,6 +35,7 @@ export default function Login() {
     });
 
     alert("Login successful");
+    navigate("/");
 
   } catch (err) {
     console.error(err);
