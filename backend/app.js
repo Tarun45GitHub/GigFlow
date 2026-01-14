@@ -1,6 +1,8 @@
 import express from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
+import dotenv from "dotenv";
+dotenv.config();
 
 
 import authRoutes from "./src/routes/authRoute.js";
@@ -11,7 +13,8 @@ const app = express();
 
 app.use(express.json());
 app.use(cookieParser());
-;
+
+
 // CORS (frontend → backend)
 app.use(
   cors({
@@ -29,7 +32,7 @@ app.use("/api/bids", bidRoutes);
 
 
 app.get("/", (req, res) => {
-  res.json({ message: "GigFlow API running 🚀" });
+  res.json({ message: `fron url: ${process.env.frontend_URl}` });
 });
 
 

@@ -10,7 +10,7 @@ dotenv.config({
 connectDB() //for database connect;
 
 const server = http.createServer(app);
-
+const forntURL=process.env.frontend_URl
 export const io = new Server(server, {
   cors: {
     origin:process.env.frontend_URl,
