@@ -16,6 +16,8 @@ export default function Login() {
     console.log("LOGIN RESPONSE:", res.data);
 
     const user = res.data.user;
+   
+
 
     if (!user || !user._id) {
       console.error("❌ User ID missing");
@@ -34,7 +36,11 @@ export default function Login() {
       console.log("JOIN EVENT SENT:", user._id);
     });
 
+    
     alert("Login successful");
+    
+    
+    localStorage.setItem("token", res.data.token);
     navigate("/");
 
   } catch (err) {
