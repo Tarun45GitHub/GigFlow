@@ -20,7 +20,7 @@ export default function Login() {
 
 
     if (!user || !user._id) {
-      console.error("❌ User ID missing");
+      console.error(" User ID missing");
       alert("User ID missing from backend");
       return;
     }
@@ -36,11 +36,11 @@ export default function Login() {
       console.log("JOIN EVENT SENT:", user._id);
     });
 
-    
     alert("Login successful");
     
     
     localStorage.setItem("token", res.data.token);
+    localStorage.setItem("username",res.data.user.name)
     navigate("/");
 
   } catch (err) {
